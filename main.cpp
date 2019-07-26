@@ -3,15 +3,14 @@
 
 using namespace std;
 
-int main(){
+int main(int argc, char *argv[]){
     filereader object_file_reader;
-    object_file_reader.load_file("2.txt");
+    if (argv[1]){
+    object_file_reader.Load_file(argv[1]);
     object_file_reader.ShowFirstPage();
-    //object_file_reader.delete_line(3);
-   // object_file_reader.delete_line(4);
-    //object_file_reader.save_file("2.txt");
-    object_file_reader.replace_line(3,"qwe");
-   /*  object_file_reader.save_file("3.txt");
-   object_file_reader.get_line(3);*/
+    object_file_reader.replace_line(rand() % 6 +1 ,"first replace");
+    object_file_reader.replace_line(rand() % 6 +1 ,"second replace");
+    }
+    else cout<<"Pls add name file: a.out 2.txt "<<endl;
     return 0;
 }
