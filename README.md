@@ -1,6 +1,7 @@
 Задача С++ - работа с текстовым файлом
 
 Основные функции
+
      Load_file(string file_name);  - Загрузка страницы
      ShowFirstPage();   - Отображение первой страницы
      OnLoadPage(int found_number_page); - Загрузка определенной страницы
