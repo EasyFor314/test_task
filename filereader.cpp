@@ -38,9 +38,16 @@
                     ClearPage();        
                 } 
             }
-            number_page_buffer=found_number_page;
+            if (number_page<found_number_page){
+                cout<<"Page not found";
+            } 
+            else {
+                number_page_buffer=found_number_page;
+                ShowLoadPage(page_counter_line);
+            }
+            
             file_read.close();
-            ShowLoadPage(page_counter_line);
+            
             };
 
 
